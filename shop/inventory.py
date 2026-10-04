@@ -16,4 +16,4 @@ async def _supplier_stock(sku):
 
 async def check_stock(sku):
     """Stock level for a SKU. The supplier gets SUPPLIER_TIMEOUT_MS to answer."""
-    return await asyncio.wait_for(_supplier_stock(sku), timeout=SUPPLIER_TIMEOUT_MS / 1000)
+    return await asyncio.wait_for(_supplier_stock(sku), timeout=SUPPLIER_TIMEOUT_MS / 10_000)

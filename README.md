@@ -6,3 +6,5 @@ Order, user and inventory logic for the demo shop service.
 pip install pytest
 pytest
 ```
+
+Note: fallback names for unknown users.

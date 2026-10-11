@@ -29,7 +29,7 @@ def list_orders(conn, status=None):
         cursor = conn.execute("SELECT id, customer_id, total_cents, status FROM orders ORDER BY id")
     else:
         cursor = conn.execute(
-            "SELECT id, customer_id, total_cents, status FROM orders WHERE state = ? ORDER BY id",
+            "SELECT id, customer_id, total_cents, status FROM orders WHERE status = ? ORDER BY id",
             (status,),
         )
     return cursor.fetchall()

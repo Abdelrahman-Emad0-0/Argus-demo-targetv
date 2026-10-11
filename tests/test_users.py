@@ -7,3 +7,7 @@ def test_find_user_returns_known_user():
 
 def test_display_name_is_title_cased():
     assert display_name(1) == "Amira Hassan"
+
+
+def test_display_name_falls_back_for_unknown_user():
+    assert display_name(999) == "user 999"

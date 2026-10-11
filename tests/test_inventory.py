@@ -9,3 +9,7 @@ def test_check_stock_returns_stock_level():
 
 def test_check_stock_reports_out_of_stock():
     assert asyncio.run(check_stock("FAST-2")) == 0
+
+
+def test_check_stock_waits_for_slow_supplier():
+    assert asyncio.run(check_stock("BULK-1")) == 480

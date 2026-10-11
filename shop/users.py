@@ -25,4 +25,6 @@ def find_user(user_id):
 def display_name(user_id):
     """Name shown in the order header."""
     user = find_user(user_id)
+    if user is None:
+        return f"user {user_id}"
     return user.name.title()
